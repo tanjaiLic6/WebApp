@@ -1,0 +1,42 @@
+*{
+    
+    box-sizing: border-box;
+}
+
+#main{
+    background-image: url(../images/background-rm.jpg) ;
+
+    background-size: cover;
+}
+
+
+.row{
+    width: 65%;
+    margin: 0 auto;
+    padding-top: 3em;
+
+}
+
+
+.char-img{
+    width: 14em;
+}
+
+.char-name{
+    font-size: 15px;
+}
+
+.col{
+    border: 1px solid white;
+    background: white;
+    text-align: center;
+}
+
+.like-button{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.like-button:hover{
+    background-color: rgb(24, 187, 24);
+}
