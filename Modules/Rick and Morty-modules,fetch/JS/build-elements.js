@@ -39,6 +39,8 @@ export let makeGridsOfCharacters= (chars)=>{
 
           
     }
+
+    return chars
 }
 
 

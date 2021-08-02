@@ -1,0 +1,40 @@
+body{
+   background-color: rgb(238, 163, 201);
+}
+
+.main{
+    display: flex;
+    width: 30%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid orangered;
+    margin: 2em auto;
+   
+}
+
+.img-big{
+    width: 100%;
+    height: auto;}
+
+.img-col{
+    flex: 50%;
+}
+
+.details-part{
+    flex: 50%;
+    padding: 1em;
+   
+    align-self: center;
+   
+
+}
+
+.details-part p{
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+    .img-col, .details-part {
+      flex: 100%;
+    }
+  }

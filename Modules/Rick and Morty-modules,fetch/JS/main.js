@@ -1,9 +1,8 @@
-import  Character from './constructors.js'
+import  {chars}  from './constructors.js'
 import { makeGridsOfCharacters} from './build-elements.js'
-  let chars= new Character();
-  let row = document.querySelector('.row');
 
- let getCharacters= ()=>{
+
+export let getCharacters= ()=>{
     const requestUrl = 'https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20';
 
     fetch(requestUrl)
@@ -20,43 +19,39 @@ import { makeGridsOfCharacters} from './build-elements.js'
           
             chars.listOfChar.push(myData[i]);
       
-            
         }
-
-        makeGridsOfCharacters(chars)
-        console.log(chars)
         
-    
-    })
-    .then((chars)=>{
-        let divs=document.querySelectorAll('.col');
-
-        let getDetails=(e)=>{
-           
-           let idChar=e.currentTarget.id;
-           console.dir(idChar)
-
-           
-          
-        }
-
+       makeGridsOfCharacters(chars)
+        // console.log(chars)
       
-        for(let i=0; i<divs.length; i++){
-            divs[i].addEventListener('click',getDetails)
-        }
-
-  
-       
-        // console.log(divs)
     })
-    
-    ;
 
-    
+    .then((c)=>{
+      let divs=document.querySelectorAll('.col');
+     
+    let getDetails=(e)=>{
+           
+       var  idChar=e.currentTarget.id;
+       
+     localStorage.setItem('id',idChar);
+      
+     window.location.href='./details.html';
+
+       return idChar
+     }
+
+   
+     for(let i=0; i<divs.length; i++){
+         divs[i].addEventListener('click',getDetails)
+     }
+     
+     
+    })
 
 }
 
-getCharacters()
+getCharacters();
+
 
 
 
