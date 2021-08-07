@@ -1,5 +1,5 @@
 
-
+/// com
 export let makeGridsOfCharacters= (chars)=>{
     // console.log(chars)
     let numbOgGrids= chars.listOfChar.length;
